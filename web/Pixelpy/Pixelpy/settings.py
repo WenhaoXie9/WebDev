@@ -81,15 +81,15 @@ WSGI_APPLICATION = 'Pixelpy.wsgi.application'
 
 import pymysql
 pymysql.install_as_MySQLdb()
-
+# Make sure you update your own database
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'pixelpy',
-        'USER' : 'root',
-        'PASSWORD' : 'Xxwwhh@529',
-        'HOST' : 'localhost',
-        'PORT' : '3306'
+        'NAME': '',
+        'USER' : '',
+        'PASSWORD' : '',
+        'HOST' : '',
+        'PORT' : ''
     }
 }
 
