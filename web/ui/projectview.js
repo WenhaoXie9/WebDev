@@ -1,0 +1,50 @@
+const projectview ={template:`
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>
+                Sim_ID
+            </th>
+            <th>
+                Pixel_name
+            </th>
+            <th>
+                Size
+            </th>
+            <th>
+                True_w_h
+            </th>
+            <th>
+                K1_1
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr v-for="pr in projects">
+            <td>{{pr.Sim_ID}}</td>
+            <td>{{pr.Pixel_name}}</td>
+            <td>{{pr.Size}}</td>
+            <td>{{pr.True_w_h}}</td>
+            <td>{{pr.K1_1}}</td>  
+        </tr>
+    </tbody>
+</table>
+`,
+
+    data(){
+        return{
+            projects:[],
+        }
+    },
+    methods:{
+        refreshData(){
+            axios.get(variables.API_URL+"project")
+            .then((response)=>{
+                this.projects=response.data;
+            });
+        }
+    },
+    mounted:function(){
+        this.refreshData();
+    }
+}
