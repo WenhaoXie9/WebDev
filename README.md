@@ -10,9 +10,14 @@
 ## SQL Setting
     pip install pymysql
     
-**Remember to add your own SQL setting in ./Pixelpy/Pixelpy/setting.py (Line 85 - 92)**
+**Remember to add your own SQL setting in *./Pixelpy/Pixelpy/setting.py* (Line 85 - 92)**
     
 ### Migrate to SQL
     python manage.py makemigrations ProjectView  //probably don't need it
 
     python manage.py migrate ProjectView
+
+
+## Start Server
+    manage.py startserver
+Then you can open your ***index.html*** in browser to check.
